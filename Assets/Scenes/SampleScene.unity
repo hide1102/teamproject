@@ -153,9 +153,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6774980933994992952, guid: a64939b21bfc65d40b4e86f64f450749, type: 3}
-  makeTime: 0
-  enemyZ: 0
-  enemyX: 0
+  makeTime: 2
+  enemyZ: 6
+  enemyX: 9
 --- !u!4 &204662819
 Transform:
   m_ObjectHideFlags: 0
@@ -362,8 +362,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c75d9a2f224e94458910588b52795dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 0
-  lifeTime: 0
+  bulletSpeed: 2
+  lifeTime: 4
   bulletPrefab: {fileID: 6567870162334058636, guid: 20fde80aed2eab240909f00697a792c4, type: 3}
 --- !u!4 &900110413
 Transform:
@@ -598,8 +598,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9efb6e49129aeb343a48a5523fd4dffd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpeed: 0
-  enemyLifeTime: 0
+  enemySpeed: -2
+  enemyLifeTime: 4
 --- !u!54 &1362004014
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -687,7 +687,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1362004012}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -837,11 +837,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 564315ffb3e1e064b8ebd1727ff1691d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 0
-  xRange: 0
-  zRange: 0
-  HitPoints: 0
-  HPText: {fileID: 0}
+  MoveSpeed: 2
+  xRange: 9
+  zRange: 6
+  HitPoints: 1
 --- !u!65 &1728945957
 BoxCollider:
   m_ObjectHideFlags: 0
