@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;//UI‚ğG‚é‚Æ‚«‚Í–Y‚­‚ê‚¸‚É‘‚­
+using UnityEngine.UI;//UIï¿½ï¿½Gï¿½ï¿½Æ‚ï¿½ï¿½Í–Yï¿½ï¿½ï¿½ê‚¸ï¿½Éï¿½ï¿½ï¿½
 
-public class ScoreCount : MonoBehaviour
+public class ScoreCount2 : MonoBehaviour
 {
     [SerializeField] private Text scoreText;
     private float score;
@@ -21,7 +21,7 @@ public class ScoreCount : MonoBehaviour
     void Update()
     {
         score = dataCs.score;
-        scoreText.text = "Score" + score.ToString();//UI‚É‘‚©‚ê‚é•¶š
+        scoreText.text = "Score" + score.ToString();//UIï¿½Éï¿½ï¿½ï¿½ï¿½ï¿½é•¶ï¿½ï¿½
     }
 }
 
