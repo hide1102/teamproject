@@ -51,6 +51,6 @@ public class PlayerMove : MonoBehaviour
 
     private void OnDestroy()
     {
-        SceneManager.LoadScene("End");
+        SceneManager.LoadScene("EndScene");
     }
 }
