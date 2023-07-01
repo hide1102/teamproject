@@ -9,7 +9,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float MoveSpeed;
     [SerializeField] private float xRange;
     [SerializeField] private float zRange;
-    [SerializeField] private float HitPoints;
+    public float HitPoints;
     [SerializeField] private Text HPText;
     
     // Start is called before the first frame update
@@ -34,7 +34,12 @@ public class PlayerMove : MonoBehaviour
        transform.Translate(new Vector3(0, 0, -MoveSpeed) * Time.deltaTime);
     
        HPText. text = "HP" + HitPoints. ToString();
-    }
+       
+       if(HitPoints <= 0)
+        {
+            Destroy(this.gameObject);
+        }
+        }
     
     private void OnTriggerEnter(Collider other)
     {
@@ -42,12 +47,6 @@ public class PlayerMove : MonoBehaviour
         {
           HitPoints--; 
         }
-        
-        if(HitPoints <= 0)
-        {
-            Destroy(this.gameObject);
-        }
-   
     }
 
     private void OnDestroy()
