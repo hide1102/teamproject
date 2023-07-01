@@ -5,24 +5,30 @@ using UnityEngine;
 public class EnemyMove : MonoBehaviour
 {
     [SerializeField] private float enemySpeed;
-    [SerializeField] private float enemyLifeTime;
     private GameObject data;
     private Data dataCs;
+    private GameObject PM;
+    private PlayerMove PMCs;
+    [SerializeField] private float EnemyLine;
     // Start is called before the first frame update
     void Start()
     {
-         data = GameObject.Find("Data");
+        data = GameObject.Find("Data");
         dataCs = data.GetComponent<Data>();
+        
+        PM = GameObject.Find("Player");
+        PMCs = PM.GetComponent<PlayerMove>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-         transform.Translate(new Vector3(0, 0, enemySpeed) * Time.deltaTime);
-
-        enemyLifeTime = enemyLifeTime - Time. deltaTime;
-        if(enemyLifeTime < 0)
+        transform.Translate(new Vector3(0, 0, enemySpeed) * Time.deltaTime);
+        
+        if(transform.position.z <= EnemyLine)
         {
+            PMCs.HitPoints--;
             Destroy(this. gameObject);
         }
     }

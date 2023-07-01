@@ -128,4 +128,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpeed: -3
-  enemyLifeTime: 4
+  EnemyLine: -6
+  HitPoints: 0
