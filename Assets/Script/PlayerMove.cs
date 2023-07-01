@@ -10,6 +10,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float xRange;
     [SerializeField] private float zRange;
     [SerializeField] private float HitPoints;
+    [SerializeField] private Text HPText;
     
     // Start is called before the first frame update
     void Start()
@@ -32,7 +33,7 @@ public class PlayerMove : MonoBehaviour
        if(Input.GetKey(KeyCode.S) && this.transform.position.z > -zRange)//Sを押したら かつ　オブジェクトのz座標が-zRange以上の値なら
        transform.Translate(new Vector3(0, 0, -MoveSpeed) * Time.deltaTime);
     
-      
+       HPText. text = "HP" + HitPoints. ToString();
     }
     
     private void OnTriggerEnter(Collider other)
