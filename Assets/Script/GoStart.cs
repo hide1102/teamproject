@@ -9,11 +9,15 @@ public class GoStart : MonoBehaviour
     private float score;
     private GameObject data;
     private Data dataCs;
+    private GameObject TC;
+    private TimeCount TCCs;
     // Start is called before the first frame update
     void Start()
     {
         data = GameObject.Find("Data");
         dataCs = data.GetComponent<Data>();
+        TC = GameObject.Find("Time");
+        TCCs = TC.GetComponent<TimeCount>();
     }
 
     // Update is called once per frame
@@ -23,6 +27,7 @@ public class GoStart : MonoBehaviour
         {   
             SceneManager.LoadScene("SampleScene");
             dataCs.score = 0;
+            TCCs.elapsedTime = 0;
         }    
     }
 }
