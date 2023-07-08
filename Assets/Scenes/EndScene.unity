@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f53ece76d18ae774bb42ed3fcf474ac6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EncourageText: {fileID: 0}
+  EncourageText: {fileID: 30400383}
 --- !u!114 &30400383
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class EncaurageWord : MonoBehaviour
 {
     [SerializeField] private Text EncourageText;
-    private float score;
     private GameObject data;
     private Data dataCs;
 
@@ -16,11 +15,13 @@ public class EncaurageWord : MonoBehaviour
         data = GameObject.Find("Data");
         dataCs = data.GetComponent<Data>();
 
-        if(10 <= score && score < 20) 
+        if (dataCs.score < 10)
+            EncourageText.text = "One More Try";
+        if(10 <= dataCs.score && dataCs.score < 20) 
             EncourageText.text = "Cool!";
-        if(20 <= score && score < 30)
+        if(20 <= dataCs.score && dataCs.score < 30)
             EncourageText.text = "Bravo!!";
-        if(30 <= score)
+        if(30 <= dataCs.score)
             EncourageText.text = "Amazing!!!";
         
         
