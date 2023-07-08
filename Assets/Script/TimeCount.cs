@@ -6,19 +6,20 @@ using UnityEngine.UI;
 public class TimeCount : MonoBehaviour
 {
     [SerializeField] private Text TimeText;
-    public float elapsedTime;
+    private GameObject data;
+    private Data dataCs;
     // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
+        data = GameObject.Find("Data");
+        dataCs = data.GetComponent<Data>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        TimeText.text = "Time" + Time.deltaTime.ToString();
         
-        elapsedTime += Time.deltaTime;
-        TimeText.text =  "Time" + elapsedTime.ToString("0.00");
+        dataCs.elapsedTime += Time.deltaTime;
+        TimeText.text =  "Time" + dataCs.elapsedTime.ToString("0.00");
     }
 }
