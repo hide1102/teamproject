@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/HardScene.unity
+    guid: fe91d74160226444d84d6175ff20a9ef
+  - enabled: 1
+    path: Assets/Scenes/HEndScene.unity
+    guid: f54c7f7cbdb293245a8c59ddb036a4fb
   m_configObjects: {}
