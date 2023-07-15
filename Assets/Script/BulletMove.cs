@@ -5,6 +5,7 @@ using UnityEngine;
 public class BulletMove : MonoBehaviour
 {
     [SerializeField] private float bulletSpeed;
+    [SerializeField] private float bigbulletSpeed;
     [SerializeField] private float lifeTime;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private GameObject bigbulletPrefab;
@@ -36,8 +37,8 @@ public class BulletMove : MonoBehaviour
         {
             bigbullet = Instantiate(bigbulletPrefab, transform.position, bigbulletPrefab.transform.rotation);
             rb = bigbullet.GetComponent<Rigidbody>();
-            rb.AddForce(transform.forward * bulletSpeed);
-            Destroy(bullet, lifeTime);
+            rb.AddForce(transform.forward * bigbulletSpeed);
+            Destroy(bigbullet, lifeTime);
             PushTime = 0;
         }
 
